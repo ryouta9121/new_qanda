@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
       redirect_to root_path, notice: 'Success!'
     else
       flash[:alert] = 'Save error!'
-      render action: :new
+      render :new
     end
   end
 
@@ -29,3 +29,5 @@ class QuestionsController < ApplicationController
       params.require(:question).permit(:name, :title, :content)
     end
 end
+
+# バリデートエラー改善行16
